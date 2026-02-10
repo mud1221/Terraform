@@ -36,7 +36,7 @@ resource "aws_route_table" "pubroute" {
 resource "aws_route_table_association" "pubsub" {
     count = local.pubsubnet_count
     route_table_id = aws_route_table.pubroute.id
-    subnet_id = aws_subnet.pubsub[*].id
+    subnet_id = aws_subnet.pubsub[count.index].id
 }
 resource "aws_internet_gateway" "mypubigw" {
     vpc_id = aws_vpc.myvpc.id
@@ -58,6 +58,6 @@ resource "aws_route_table_association" "pvtsub" {
 }
 resource "aws_nat_gateway" "mypvtngw" {
     connectivity_type = "private"
-    subnet_id = aws_subnet.pvtsub[*].id
+    subnet_id = aws_subnet.pubsub[*].id
   
 }
