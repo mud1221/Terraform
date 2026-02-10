@@ -54,7 +54,7 @@ resource "aws_route_table" "pvtroute" {
 resource "aws_route_table_association" "pvtsub" {
     count = local.pvtsubnet_count
     route_table_id = aws_route_table.pvtroute.id
-    subnet_id = aws_subnet.pvtsub[*].id  
+    subnet_id = aws_subnet.pvtsub[count.index].id  
 }
 resource "aws_nat_gateway" "mypvtngw" {
     connectivity_type = "private"
