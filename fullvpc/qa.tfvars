@@ -2,7 +2,7 @@ net_info = {
   vpccidr = "172.16.0.0/16"
         vpcname = "mynetwork1"
         pub_sub = [ {
-          pubsubnetscidr = ["172.16.0.0/24","172.16.1.0/24"]
+          pubsubnetcidr = ["172.16.0.0/24","172.16.1.0/24"]
           pubsubnetnames = ["pubsub1","pubsub2"]
           pubsubnetazs = ["ap-south-1a","ap-south-1b"]
         }]
