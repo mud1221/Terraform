@@ -8,10 +8,10 @@ output "pvtsubnetsids"{
     value = aws_subnet.pvtsub[0].id
 }
 output "pubrouteid"{
-    value = aws_subnet.pubroute[0].id
+    value = aws_route_table.pubroute.id
 }
 output "pvtrouteid"{
-    value = aws_subnet.pvtroute[0].id
+    value = aws_route_table.pvtroute.id
 }
 output "igwid"{
     value = aws_internet_gateway.mypubigw.id

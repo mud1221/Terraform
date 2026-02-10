@@ -43,7 +43,7 @@ resource "aws_internet_gateway" "mypubigw" {
 }
 resource "aws_route_table" "pvtroute" {
     vpc_id = aws_vpc.myvpc.id
-    route = {
+    route  {
         cidr_block = "0.0.0.0/0"
         nat_gateway_id = aws_nat_gateway.mypvtngw.id
     }  
