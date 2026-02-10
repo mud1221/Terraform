@@ -58,6 +58,6 @@ resource "aws_route_table_association" "pvtsub" {
 }
 resource "aws_nat_gateway" "mypvtngw" {
     connectivity_type = "private"
-    subnet_id = aws_subnet.pubsub[*].id
+    subnet_id = aws_subnet.pubsub[0].id
   
 }
