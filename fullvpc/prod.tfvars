@@ -7,8 +7,8 @@ net_info = {
           pubsubnetazs = ["ap-south-1a","ap-south-1b"]
         }]
         pvt_sub = [{
-          pvtsubnetazs = ["ap-south-1a","ap-south-1b"]
-          pvtsubnetnames = ["pvtsub1","pvtsub2"]
           pvtsubnetcidr = ["10.0.2.0/24","10.0.3.0/24"]
+          pvtsubnetnames = ["pvtsub1","pvtsub2"]
+          pvtsubnetazs = ["ap-south-1","ap-south-1"]
         }]
     }
